@@ -530,7 +530,20 @@ const AdminProduct = () => {
             <Form.Item
               label="Giá cả"
               name="price"
-              rules={[{ required: true, message: 'Please input your count price!' }]}
+              rules={[
+                { required: true, message: 'Please input your count price!' },
+                {
+                  validator: (rule, value) => {
+                    const priceValue = Number(value);
+            
+                    if (isNaN(priceValue) || priceValue < 1000) {
+                      return Promise.reject('Price must be higher than 1000');
+                    }
+                    return Promise.resolve();
+                  },
+                },
+
+              ]}
             >
               <InputComponent value={stateProduct.price} onChange={handleOnchange} name="price" />
             </Form.Item>
@@ -544,14 +557,38 @@ const AdminProduct = () => {
             <Form.Item
               label="Đánh Giá"
               name="rating"
-              rules={[{ required: true, message: 'Please input your count rating!' }]}
+              rules={[
+                { required: true, message: 'Please input your count rating!' },
+                {
+                  validator: (rule, value) => {
+                    const ratingValue = Number(value);
+            
+                    if (isNaN(ratingValue) || ratingValue < 0 || ratingValue > 5) {
+                      return Promise.reject('Rating must be betwween 1 and 5');
+                    }
+                    return Promise.resolve();
+                  },
+                },
+              ]}
             >
               <InputComponent value={stateProduct.rating} onChange={handleOnchange} name="rating" />
             </Form.Item>
             <Form.Item
               label="Giảm Giá"
               name="discount"
-              rules={[{ required: true, message: 'Please input your discount of product!' }]}
+              rules={[
+                { required: true, message: 'Please input your discount of product!' },
+                {
+                  validator: (rule, value) => {
+                    const numericValue = Number(value);
+            
+                    if (isNaN(numericValue) || numericValue < 0 || numericValue > 100) {
+                      return Promise.reject('Discount must be between 0 and 100');
+                    }
+                    return Promise.resolve();
+                  },
+                },
+              ]}
             >
               <InputComponent value={stateProduct.discount} onChange={handleOnchange} name="discount" />
             </Form.Item>
@@ -617,7 +654,20 @@ const AdminProduct = () => {
             <Form.Item
               label="Price"
               name="price"
-              rules={[{ required: true, message: 'Please input your count price!' }]}
+              rules={[
+                { required: true, message: 'Please input your count price!' },
+                {
+                  validator: (rule, value) => {
+                    const priceValue = Number(value);
+            
+                    if (isNaN(priceValue) || priceValue < 1000) {
+                      return Promise.reject('Price must be higher than 1000');
+                    }
+                    return Promise.resolve();
+                  },
+                },
+
+              ]}
             >
               <InputComponent value={stateProductDetails.price} onChange={handleOnchangeDetails} name="price" />
             </Form.Item>
@@ -631,14 +681,38 @@ const AdminProduct = () => {
             <Form.Item
               label="Rating"
               name="rating"
-              rules={[{ required: true, message: 'Please input your count rating!' }]}
+              rules={[
+                { required: true, message: 'Please input your count rating!' },
+                {
+                  validator: (rule, value) => {
+                    const ratingValue = Number(value);
+            
+                    if (isNaN(ratingValue) || ratingValue < 0 || ratingValue > 5) {
+                      return Promise.reject('Rating must be betwween 1 and 5');
+                    }
+                    return Promise.resolve();
+                  },
+                },
+              ]}
             >
               <InputComponent value={stateProductDetails.rating} onChange={handleOnchangeDetails} name="rating" />
             </Form.Item>
             <Form.Item
               label="Discount"
               name="discount"
-              rules={[{ required: true, message: 'Please input your discount of product!' }]}
+              rules={[
+                { required: true, message: 'Please input your discount of product!' },
+                {
+                  validator: (rule, value) => {
+                    const numericValue = Number(value);
+            
+                    if (isNaN(numericValue) || numericValue < 0 || numericValue > 100) {
+                      return Promise.reject('Discount must be between 0 and 100');
+                    }
+                    return Promise.resolve();
+                  },
+                },
+              ]}
             >
               <InputComponent value={stateProductDetails.discount} onChange={handleOnchangeDetails} name="discount" />
             </Form.Item>
