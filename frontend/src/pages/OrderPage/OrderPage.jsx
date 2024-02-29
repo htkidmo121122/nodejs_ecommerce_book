@@ -202,10 +202,10 @@ const OrderPage = () => {
   return (
     <div style={{background: '#f5f5fa', with: '100%', height: '100vh', paddingBottom: '10px'}}>
       <div style={{height: '100%', width: '1270px', margin: '0 auto'}}>
-        <h3 style={{fontWeight: 'bold', fontSize: '30px', textAlign: 'center', padding: '5px'}}>Giỏ hàng</h3>
+        <h3 style={{fontWeight: 'bold', fontSize: '30px', textAlign: 'center', padding: '5px'}}></h3>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
           <WrapperLeft>
-            <h4>Phí giao hàng</h4>
+         
             <WrapperStyleHeaderDilivery>
               <StepComponent items={itemsDelivery} current={diliveryPriceMemo === 10000 
                 ? 2 : diliveryPriceMemo === 20000 ? 1 
