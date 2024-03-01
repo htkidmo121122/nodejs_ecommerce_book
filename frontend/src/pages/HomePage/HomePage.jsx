@@ -13,6 +13,8 @@ import { useState } from 'react'
 import Loading from '../../components/LoadingComponent/Loading'
 import { useDebounce } from '../../hooks/useDebounce'
 import { useEffect } from 'react'
+import { MDBAccordion, MDBAccordionItem, MDBIcon } from 'mdb-react-ui-kit';
+
 
 const HomePage = () => {
   const searchProduct = useSelector((state) => state?.product?.search)
@@ -58,7 +60,7 @@ const HomePage = () => {
       <div className='body' style={{ width: '100%', backgroundColor: '#efefef', paddingBottom: '10px'}}>
         <div id="container" style={{ height: 'auto', width: '1270px', margin: '0 auto' }}>
           <SliderComponent arrImages={[slider1, slider2, slider3]} />
-          <div style={{ width: '100%', backgroundColor: '#efefef', paddingTop: '20px', fontWeight: 'bold', fontSize: '20px'}}>
+          <div style={{ width: '100%', backgroundColor: '#efefef', paddingTop: '20px', fontWeight: 'bold', fontSize: '20px', borderBottom: '4px solid green'}}>
                 Sản Phẩm Mới Nhất
           </div>
           <WrapperProducts>
@@ -91,6 +93,42 @@ const HomePage = () => {
               onClick={() => setLimit((prev) => prev + 6)}
             />
           </div>
+          <div style={{ width: '100%', backgroundColor: '#efefef', textAlign: 'center', fontWeight: 'bold', fontSize: '20px', marginTop: '20px', borderBottom: '4px solid green'}}>
+                Hệ Thống Nhà Sách Số 1 TPHCM
+          </div>
+          <div className="ratio ratio-21x9" style={{margin : '20px 0px 20px 0px', aspectRatio: "50%"}}>
+            <iframe
+              src="https://www.youtube.com/embed/0wGNfRT9q2o?si=W4OuituqZyW2V7UY"
+              title="YouTube video"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <MDBAccordion initialActive={1}>
+      <MDBAccordionItem collapseId={1} headerTitle={<><MDBIcon fas icon="question-circle" /> &nbsp; Accordion Item #1</>}>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </MDBAccordionItem>
+      <MDBAccordionItem collapseId={2} headerTitle={<><MDBIcon fas icon="question-circle" /> &nbsp; Accordion Item #2</>}>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </MDBAccordionItem>
+      <MDBAccordionItem collapseId={3} headerTitle={<><MDBIcon fas icon="question-circle" /> &nbsp; Accordion Item #3</>}>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </MDBAccordionItem>
+    </MDBAccordion>
         </div>
       </div>
     </Loading>

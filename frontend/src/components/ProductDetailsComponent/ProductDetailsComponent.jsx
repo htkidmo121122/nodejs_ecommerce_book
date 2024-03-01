@@ -214,7 +214,7 @@ const ProductDetailsComponent = ({idProduct}) => {
                             styleTextButton={{ color: 'rgb(13, 92, 182)', fontSize: '15px' }}
                         ></ButtonComponent> */}
                     </div>
-                    <div style={{ padding: '20px 20px 0px 0px'}}>
+                    <div  style={{ padding: '20px 20px 0px 0px', fontSize: '15px'}}>
                         {productDetails?.description}
                     </div>
                 </Col>
