@@ -11,6 +11,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { PersistGate } from 'redux-persist/integration/react'
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const queryClient = new QueryClient()
 root.render(

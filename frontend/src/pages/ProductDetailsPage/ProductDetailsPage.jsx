@@ -97,7 +97,7 @@ const ProductDetailsPage = () => {
      
       <div style={{ width: '1270px', height: '100%', margin: '0 auto'}} >
         
-        <h5 style={{ fontSize: '15px', borderBottom: '3px solid red', padding: '5px'}}><span style={{cursor: 'pointer', fontWeight: 'bold'}} onClick={() => {navigate('/')}}>Trang chủ</span>  -  {productDetails?.type}  -  {productDetails?.name}</h5>
+        <h5 style={{ fontSize: '15px', borderBottom: '3px solid green', padding: '5px'}}><span style={{cursor: 'pointer', fontWeight: 'bold'}} onClick={() => {navigate('/')}}>Trang chủ</span>  -  {productDetails?.type}  -  {productDetails?.name}</h5>
         <ProductDetailsComponent idProduct={id} />
       </div>
       <div style={{ width: 'auto', backgroundColor: '#efefef', paddingTop: '20px', fontWeight: 'bold', fontSize: '30px', /* paddingLeft: '185px' */ textAlign: 'center'}}>

@@ -193,15 +193,15 @@ const ProductDetailsComponent = ({idProduct}) => {
                                     height: '48px',
                                     width: '220px',
                                     border: 'none',
-                                    borderRadius: '4px'
+                                    borderRadius: '10px'
                                 }}
                                 onClick={handleAddOrderProduct}
-                                textbutton={'Chọn mua'}
+                                textbutton={'Chọn Mua'}
                                 styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
                             ></ButtonComponent>
                             {errorLimitOrder && <div style={{color: 'red' , paddingLeft: '5px', paddingTop: '10px', }}>SẢN PHẨM HẾT HÀNG</div>}
                         </div>
-                        <ButtonComponent
+                        {/* <ButtonComponent
                             size={40}
                             styleButton={{
                                 background: '#fff',
@@ -212,7 +212,7 @@ const ProductDetailsComponent = ({idProduct}) => {
                             }}
                             textbutton={'Mua trả sau'}
                             styleTextButton={{ color: 'rgb(13, 92, 182)', fontSize: '15px' }}
-                        ></ButtonComponent>
+                        ></ButtonComponent> */}
                     </div>
                     <div style={{ padding: '20px 20px 0px 0px'}}>
                         {productDetails?.description}
