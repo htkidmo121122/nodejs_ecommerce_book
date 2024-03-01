@@ -6,7 +6,7 @@ export default function FooterComponent() {
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{ fontSize: '15px'}}>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' style={{ color: '#fff', background:  '#739072', borderBottom: '5px solid black'}} >
         <div className='me-5 d-none d-lg-block'>
-          <span style={{ paddingLeft: '0px 95px'}} >Chào mừng đến với Huflit Book</span>
+          <span style={{ paddingLeft: '95px'}} >Chào mừng đến với Huflit Book</span>
         </div>
 
         <div style={{ paddingRight: '95px'}} >
