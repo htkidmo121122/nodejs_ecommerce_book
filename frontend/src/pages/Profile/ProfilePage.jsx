@@ -80,7 +80,7 @@ const ProfilePage = () => {
     }
     return (
         <div style={{ width: '1270px', margin: '0 auto', height: '500px', background: 'linear-gradient(136deg, rgb(240, 248, 255) 20%, rgb(255, 128, 128) 50%);' }}>
-            <WrapperHeader>Thông tin người dùng</WrapperHeader>
+            {/* <WrapperHeader>Thông tin người dùng</WrapperHeader> */}
             <Loading isLoading={isLoading}>
                 <WrapperContentProfile>
                     <WrapperInput>

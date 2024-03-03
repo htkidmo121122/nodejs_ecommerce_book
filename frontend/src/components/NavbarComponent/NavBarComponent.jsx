@@ -62,7 +62,7 @@ const NavBarComponent = () => {
 
     return (
         <div>
-            <WrapperLableText>Thương Hiệu</WrapperLableText>
+            <WrapperLableText>Thể Loại</WrapperLableText>
             <WrapperContent>
                 {/* {renderContent('text', ['Tu lanh', 'TV', 'MAYGIAT'])} */}
                 {typeProducts.map((item) => {

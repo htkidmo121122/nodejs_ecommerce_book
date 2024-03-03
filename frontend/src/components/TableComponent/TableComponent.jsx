@@ -60,6 +60,7 @@ const TableComponent = (props) => {
         columns={columns}
         dataSource={dataSource}
         {...props}
+        style={{marginRight: '20px'}}
       />
     </Loading>
   )

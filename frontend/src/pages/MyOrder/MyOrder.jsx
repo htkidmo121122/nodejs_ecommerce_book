@@ -88,7 +88,7 @@ const MyOrderPage = () => {
     <Loading isLoading={isLoading || isLoadingCancel}>
       <WrapperContainer>
         <div style={{height: '100%', width: '1270px', margin: '0 auto', paddingBottom: '10px'}}>
-          <h4 style={{textAlign: 'center' , fontSize: '25px', paddingTop: '10px'}}>Đơn Hàng Của Tôi</h4>
+          {/* <h4 style={{textAlign: 'center' , fontSize: '25px', paddingTop: '10px'}}></h4> */}
           <WrapperListOrder>
             {data?.map((order) => {
               return (

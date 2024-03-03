@@ -247,7 +247,7 @@ const PaymentPage = () => {
     <div style={{background: '#f5f5fa', with: '100%', height: 'auto'}}>
       <Loading isLoading={isLoadingAddOrder}>
         <div style={{height: '100%', width: '1270px', margin: '0 auto'}}>
-          <h3 style={{fontWeight: 'bold', fontSize: '30px', textAlign: 'center', padding: '10px'}}>Thanh Toán</h3>
+          <h3 style={{fontWeight: 'bold', fontSize: '30px', textAlign: 'center', padding: '10px'}}></h3>
           <div style={{ display: 'flex', justifyContent: 'center'}}>
             <WrapperLeft>
               <WrapperInfo>
@@ -338,6 +338,7 @@ const PaymentPage = () => {
               // onFinish={onUpdateUser}
               autoComplete="on"
               form={form}
+
             >
               <Form.Item
                 label="Name"

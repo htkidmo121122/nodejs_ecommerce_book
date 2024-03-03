@@ -15,14 +15,15 @@ import { useSelector } from 'react-redux';
 import { useQueries } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import Loading from '../../components/LoadingComponent/Loading';
+import FooterComponent from '../../components/FooterComponent/FooterComponent';
 
 const AdminPage = () => {
   const user = useSelector((state) => state?.user)
 
   const items = [
-    getItem('Người dùng', 'users', <UserOutlined />),
-    getItem('Sản phẩm', 'products', <AppstoreOutlined />),
-    getItem('Đơn hàng', 'orders', <ShoppingCartOutlined />),
+    getItem('Người Dùng', 'users', <UserOutlined />),
+    getItem('Sản Phẩm', 'products', <AppstoreOutlined />),
+    getItem('Đơn Hàng', 'orders', <ShoppingCartOutlined />),
     
   ];
 
@@ -102,9 +103,10 @@ const AdminPage = () => {
           style={{
             width: 256,
             boxShadow: '1px 1px 2px #ccc',
-            height: '100vh',
+            height: '130vh',
             marginTop: '15px',
             gap: '10px'
+            
             
           }}
           items={items}
@@ -119,6 +121,7 @@ const AdminPage = () => {
           {renderPage(keySelected)}
         </div>
       </div>
+      <FooterComponent/>
       
     </>
   )

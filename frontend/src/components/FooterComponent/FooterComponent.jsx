@@ -1,7 +1,23 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import TypeProduct from '../../components/TypeProduct/TypeProduct'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import * as ProductService from '../../services/ProductService'
 
 export default function FooterComponent() {
+  //Lọc sản phẩm
+  const [typeProducts, setTypeProducts] = useState([])
+  const fetchAllTypeProduct = async () => {
+    const res = await ProductService.getAllTypeProduct()
+    if(res?.status === 'OK') {
+      setTypeProducts(res?.data)
+    }
+  }
+
+  useEffect(() => {
+    fetchAllTypeProduct()
+  }, [])
   return (
     
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{ fontSize: '15px'}}>
@@ -47,7 +63,7 @@ export default function FooterComponent() {
 
             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Sản Phẩm</h6>
-              <p>
+              {/* <p>
                 <a href='#!' className='text-reset'>
                   Angular
                 </a>
@@ -66,7 +82,14 @@ export default function FooterComponent() {
                 <a href='#!' className='text-reset'>
                   Laravel
                 </a>
-              </p>
+              </p> */}
+              <p style={{display: 'flex', flexDirection: 'column',gap: '5px', textAlign: 'left'}}>
+                {typeProducts.map((item) => {
+                    return (
+                    <TypeProduct name={item} key={item}/>
+                    )
+                })}
+                </p>
               
             </MDBCol>
 

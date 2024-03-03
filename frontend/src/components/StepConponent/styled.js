@@ -5,6 +5,7 @@ const { Step } = Steps;
 
 export const CustomStep = styled(Step)`
   .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-icon {
-    background: #1a9412
+    background: red;
+
   }
 `

@@ -8,6 +8,5 @@ export const WrapperType = styled.div`
     color: #fff;
     border-radius: 4px;
   }
-  fontSize: 50px,
   
 `

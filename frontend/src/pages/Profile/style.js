@@ -17,6 +17,7 @@ export const WrapperContentProfile = styled.div`
     padding: 30px;
     border-radius: 10px;
     gap: 30px;
+    margin-top : 50px;
 `
 
 export const WrapperLabel = styled.label`
