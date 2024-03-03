@@ -20,7 +20,7 @@ const TypeProductPage = () => {
     const [loading, setLoading] = useState(false)
     const [panigate, setPanigate] = useState({
         page: 0,
-        limit: 20,
+        limit: 10,
         total: 1,
         
     })
@@ -82,7 +82,7 @@ const TypeProductPage = () => {
                                     )
                                 })}
                             </WrapperProducts>
-                            <Pagination defaultCurrent={panigate.page + 1} total={panigate?.limit} onChange={onChange} style={{ textAlign: 'center', marginTop: '10px' }} />
+                            <Pagination defaultCurrent={panigate.page + 1} total={panigate?.total} onChange={onChange} style={{ textAlign: 'center', marginTop: '10px' }} />
                         </Col>
                     </Row>
                 </div>

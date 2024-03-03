@@ -268,19 +268,19 @@ const AdminProduct = () => {
       sorter: (a, b) => a.price - b.price,
       filters: [
         {
-          text: '>= 50',
+          text: '>= 50.000',
           value: '>=',
         },
         {
-          text: '<= 50',
+          text: '<= 50.000',
           value: '<=',
         }
       ],
       onFilter: (value, record) => {
         if (value === '>=') {
-          return record.price >= 50
+          return record.price >= 50000
         }
-        return record.price <= 50
+        return record.price <= 50000
       },
     },
     {
@@ -552,7 +552,7 @@ const AdminProduct = () => {
               name="description"
               rules={[{ required: true, message: 'Please input your count description!' }]}
             >
-              <InputComponent value={stateProduct.description} onChange={handleOnchange} name="description" />
+              <InputComponent value={stateProduct.description} onChange={handleOnchange} name="description" style={{}} />
             </Form.Item>
             <Form.Item
               label="Đánh Giá"
